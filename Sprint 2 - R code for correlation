@@ -1,0 +1,11 @@
+library(readxl)
+data <- read_excel("MASA Hackathon 2022.xlsx")
+View(data)
+
+install.packages("corrplot")
+library("corrplot")
+corrplot(cor(data),method="circle")
+
+install.packages("ggcorrplot")
+library("ggcorrplot")
+ggcorrplot(cor(data))
